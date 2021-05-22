@@ -1,0 +1,376 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+body{
+	font-family: montserrat, arial;
+	background-image: url('bghtml.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+nav{
+	background: red;
+	height: 80px;
+	width: 100%;
+}
+label.logo{
+	color: white;
+	font-size: 35px;
+	line-height: 80px;
+	padding: 0 100px;
+	font-weight: bold;
+}
+nav ul{
+	float: left;
+	margin-left: 0 20px;
+}
+
+nav ul li{
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+}
+nav ul li a{
+	color: white;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 3px;
+}
+a.active, a:hover{
+	background: #78A800;
+	transition: .5s;
+}
+.tombol3{
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+#check{
+	display: none;
+}
+@media (max-width: 952px){
+	label.logo{
+		font-size: 30px;
+		padding-left: 50px;
+	}
+	nav ul li a{
+		font-size: 16px;
+	}
+}
+@media (max-width: 858px){
+	.tombol3{
+		display: block;
+	}
+	ul{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: black;
+		top: 80px;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+	}
+	nav ul li{
+		display: block;
+		margin: 50px 0;
+		line-height: 30px;
+	}
+	nav ul li a{
+		font-size: 20px;
+	}
+	a:hover, a.active{
+		background: none;
+		color: #78A800;
+	}
+	#check:checked ~ ul{
+		left: 0;
+	}
+}
+.batasbawah{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: red;
+	color: white;
+	text-align: center;
+	padding: 7px;
+}
+table, th, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+	background-color: #E6E6FA;
+}
+th, td{
+	padding: 8px;
+	width: 80px;
+	text-align: center;
+}
+.isi {
+	margin: 5% 80px 5% 80px;
+	padding: 8%;
+	background: rgba(27, 187, 5, 0.39);
+	border: black 2px solid;
+}
+/*Emoji tertawa*/
+.emoji {
+  width: 120px;
+  height: 120px;
+  margin: 15px 15px 40px;
+  background: #FFDA6A;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+}
+.emoji:after {
+  position: absolute;
+  bottom: -40px;
+  font-size: 18px;
+  width: 60px;
+  left: calc(50% - 30px);
+  color: #8A8A8A;
+}
+ 
+.emoji__face, .emoji__eyes, .emoji__mouth, .emoji__tongue {
+  position: absolute;
+}
+.emoji__face:before, .emoji__face:after, .emoji__eyes:before, .emoji__eyes:after, .emoji__mouth:before, .emoji__mouth:after, .emoji__tongue:before, .emoji__tongue:after {
+  position: absolute;
+  content: '';
+}
+ 
+.emoji__face {
+  width: inherit;
+  height: inherit;
+}
+ 
+.emoji--haha:after {
+  content: '';
+}
+.emoji--haha .emoji__face {
+  -webkit-animation: haha-face 2s linear infinite;
+          animation: haha-face 2s linear infinite;
+}
+.emoji--haha .emoji__eyes {
+  width: 26px;
+  height: 6px;
+  border-radius: 2px;
+  left: calc(50% - 13px);
+  top: 35px;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  background: transparent;
+  box-shadow: -25px 5px 0 0 #000000, 25px -5px 0 0 #000000;
+}
+.emoji--haha .emoji__eyes:after {
+  left: 0;
+  top: 0;
+  width: 26px;
+  height: 6px;
+  border-radius: 2px;
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+  background: transparent;
+  box-shadow: -25px -5px 0 0 #000000, 25px 5px 0 0 #000000;
+}
+.emoji--haha .emoji__mouth {
+  width: 80px;
+  height: 40px;
+  left: calc(50% - 40px);
+  top: 50%;
+  background: #000000;
+  border-radius: 0 0 40px 40px;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-animation: haha-mouth 2s linear infinite;
+          animation: haha-mouth 2s linear infinite;
+}
+ 
+.emoji--haha .emoji__tongue {
+  width: 70px;
+  height: 30px;
+  background: #F55064;
+  left: calc(50% - 35px);
+  bottom: -10px;
+  border-radius: 50%;
+}
+ 
+@-webkit-keyframes haha-face {
+  10% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  20% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  30% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  40% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  50% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  60% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  70% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  80% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+@keyframes haha-face {
+  10% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  20% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  30% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  40% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  50% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  60% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  70% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  80% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+@-webkit-keyframes haha-mouth {
+  10% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    top: 45%;
+  }
+  20% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    top: 45%;
+  }
+  30% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    top: 45%;
+  }
+  40% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    top: 45%;
+  }
+  50% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    top: 45%;
+  }
+  60% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    top: 50%;
+  }
+  70% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    top: 50%;
+  }
+  80% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    top: 50%;
+  }
+  90% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    top: 50%;
+  }
+}
+@keyframes haha-mouth {
+  10% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    top: 45%;
+  }
+  20% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    top: 45%;
+  }
+  30% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    top: 45%;
+  }
+  40% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    top: 45%;
+  }
+  50% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    top: 45%;
+  }
+  60% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    top: 50%;
+  }
+  70% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    top: 50%;
+  }
+  80% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    top: 50%;
+  }
+  90% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    top: 50%;
+  }
+}
