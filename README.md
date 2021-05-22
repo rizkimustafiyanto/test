@@ -1,2 +1,0 @@
-# test
-kegiatan 1
